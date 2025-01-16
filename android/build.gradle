@@ -26,10 +26,17 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdk 33
-    
-    defaultConfig {
-        targetSdkVersion 33
+    compileSdkVersion 33
+
+    namespace "io.purplesoft.sumup"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
     }
 
     sourceSets {
